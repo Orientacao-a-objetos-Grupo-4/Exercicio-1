@@ -1,19 +1,18 @@
 class Turma():
-    def __init__(self, codigo, nome, professor, alunos=None):
-        self.codigo = codigo
-        self.nome = nome
-        self.professor = professor
-        self.alunos = alunos if alunos is not None else []
-
-    def adicionar_aluno(self, aluno):
-        self.alunos.append(aluno)
-
-    def remover_aluno(self, aluno):
-        if aluno in self.alunos:
-            self.alunos.remove(aluno)
-
-    def listar_alunos(self):
-        return [aluno.nome for aluno in self.alunos]
-
-    def __str__(self):
-        return f'Turma {self.codigo} - {self.nome}, Professor: {self.professor.nome}, Alunos: {len(self.alunos)}'
+    def __init__ (self):
+        self.__id = None
+        self.__disciplina = None
+        self.__alunos = []
+    
+    def get_id(self):
+        return self.__id
+    def set_id(self, id):
+        self.__id = id
+    def get_disciplina(self):
+        return self.__disciplina
+    def set_disciplina(self, disciplina):
+        self.__disciplina = disciplina
+    def get_alunos(self):
+        return self.__alunos
+    def set_alunos(self, alunos):
+        self.__alunos = alunos
