@@ -26,5 +26,8 @@ class Turma():
         return self.__curso
     def set_curso(self, curso):
         self.__curso = curso
+    
+    def add_aluno(self, aluno):
+        self.__alunos.append(aluno)
 
     
