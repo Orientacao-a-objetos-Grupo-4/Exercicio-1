@@ -6,6 +6,7 @@ class Curso():
         self.__id = None
         self.__nome = None
         self.__turmas = []
+        self.__alunos = []
     
     def get_Cursoid(self):
         return self.__id
@@ -15,6 +16,18 @@ class Curso():
         return self.__nome
     def set_nome(self, nome):
         self.__nome = nome
+
+    def get_Alunos(self):
+        return self.__alunos
+    
+    def set_Alunos(self, alunos):
+        self.__alunos = alunos
+
+    def add_aluno(self, aluno):
+        self.__alunos.append(aluno)
+
+    def remove_aluno(self, aluno):
+        self.__alunos.remove(aluno)
 
     def add_turma(self, turma):
         self.__turmas.append(turma)

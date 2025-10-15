@@ -142,7 +142,7 @@ Curso1.pesquisa_turma(Turma3)
 print("_____________________________________________________________________________________")
 
 # Exercício 10: Escluir um aluno de uma turma
-print("Exercício 10: Escluir um aluno de uma turma")
+print("Exercício 10: Excluir um aluno de uma turma")
 
 # Turma1.rem_aluno(Aluno1)
 Turma1.retorno_rem_aluno(Aluno4)
@@ -150,7 +150,7 @@ Turma1.retorno_rem_aluno(Aluno4)
 print("_____________________________________________________________________________________")
 
 # Exercício 11: Escluir uma turma de um curso
-print("Exercício 11: Escluir uma turma de um curso")
+print("Exercício 11: Excluir uma turma de um curso")
 
 Curso1.rem_turma(Turma3)
 # Curso1.rem_turma(Turma1)
@@ -158,7 +158,7 @@ Curso1.rem_turma(Turma3)
 print("_____________________________________________________________________________________")
 
 # Exercício 12: Escluir um aluno de um curso
-print("Exercício 12: Escluir um aluno de um curso")
+print("Exercício 12: Excluir um aluno de um curso")
 
 Curso1.rem_aluno_curso(Aluno4)
 
