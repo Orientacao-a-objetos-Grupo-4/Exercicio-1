@@ -102,4 +102,3 @@ class Curso():
             print(f"O aluno {aluno.get_nome()} foi excluído com sucesso do curso {self.__nome}!")
         else:
             print(f"O aluno {aluno.get_nome()} não pertence ao curso {self.__nome}.")
-        

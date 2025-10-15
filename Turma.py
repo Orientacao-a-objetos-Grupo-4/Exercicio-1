@@ -33,9 +33,12 @@ class Turma():
     def rem_aluno(self, aluno):
         if aluno in self.__alunos:
             self.__alunos.remove(aluno)
+            print(f"Aluno {aluno.get_nome()} removido da turma com sucesso! Da turma {self.get_id()}.")
             return True
         else:
+            print(f"Aluno {aluno.get_nome()} não está nesta turma. {self.get_id()}.")
             return False
+
     def retorno_rem_aluno(self, aluno):
         if self.rem_aluno(aluno):
             self.__alunos.remove(aluno)

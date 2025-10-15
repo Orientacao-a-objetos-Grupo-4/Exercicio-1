@@ -65,101 +65,53 @@ Turma3.add_aluno(Aluno4)
 
 Curso1 = Curso()
 Curso2 = Curso()
+
 Curso1.set_Cursoid(1)
 Curso1.set_nome("Eng. de Software")
+
 Curso2.set_Cursoid(2)
 Curso2.set_nome("Arquitetura")
 
 Curso1.add_turma(Turma1)
 Curso1.add_turma(Turma2)
-Curso2.add_turma(Turma3)
+Curso1.add_turma(Turma3)
 
 print("_____________________________________________________________________________________")
-
-# Exercício 1: Imprimir o nome do professor da turma
 print("Exercício 1: Imprimir o nome do professor da turma")
-
 Turma1.prof_turma()
-
 print("_____________________________________________________________________________________")
-
-# Exercício 2: Imprimir os nomes dos alunos da turma
 print("Exercício 2: Imprimir os nomes dos alunos da turma")
-
 Turma3.alunos_turma()
-
 print("_____________________________________________________________________________________")
-
-# Exercício 3: Imprimir o nome do professor de alguma turma de um curso
-print("Exercício 3: Imprimir o nome do professor de alguma turma de algum curso")
-
+print("Exercício 3: Imprimir o nome do professor de alguma turma de um curso")
 Curso1.professor_turma()
 Curso2.professor_turma()
-
 print("_____________________________________________________________________________________")
-
-# Exercício 4: Imprimir os nomes dos alunos que estão em alguma turma de um curso
-print("Exercício 4: Imprimir os nomes dos alunos que estão em alguma turma de algum curso")
-
+print("Exercício 4: Imprimir os nomes dos alunos que estão em alguma turma de um curso")
 Curso1.alunos_turma()
-
 print("_____________________________________________________________________________________")
-
-# Exercício 5: Imprimir os nomes dos alunos que estão registrados em um curso
-print("Exercício 5: Imprimir os nomes dos alunos que estão registrados em algum curso")
-
+print("Exercício 5: Imprimir os nomes dos alunos que estão registrados em um curso")
 Curso1.retorno_listar_alunos()
-
 print("_____________________________________________________________________________________")
-
-# Exercício 6: Imprimir quais disciplinas estão em alguma turma de um curso
 print("Exercício 6: Imprimir quais disciplinas estão em alguma turma de um curso")
-
 Curso1.obter_disciplinas()
 Curso2.obter_disciplinas()
-
 print("_____________________________________________________________________________________")
-
-# Exercício 7: Verificar se um aluno está em uma turma
 print("Exercício 7: Verificar se um aluno está em uma turma")
-
 Turma1.pesquisa_aluno(Aluno4)
-
 print("_____________________________________________________________________________________")
-
-# Exercício 8: Verificar se um aluno está em um curso
 print("Exercício 8: Verificar se um aluno está em um curso")
-
 Curso1.pesquisa_aluno(Aluno1)
-
 print("_____________________________________________________________________________________")
-
-# Exercício 9: Verificar se uma turma está em um curso
 print("Exercício 9: Verificar se uma turma está em um curso")
-
 Curso1.pesquisa_turma(Turma3)
-
 print("_____________________________________________________________________________________")
-
-# Exercício 10: Escluir um aluno de uma turma
 print("Exercício 10: Excluir um aluno de uma turma")
-
-# Turma1.rem_aluno(Aluno1)
-Turma1.retorno_rem_aluno(Aluno4)
-
+Turma1.rem_aluno(Aluno1)
 print("_____________________________________________________________________________________")
-
-# Exercício 11: Escluir uma turma de um curso
 print("Exercício 11: Excluir uma turma de um curso")
-
-Curso1.rem_turma(Turma3)
-# Curso1.rem_turma(Turma1)
-
+Curso1.rem_turma(Turma1)
 print("_____________________________________________________________________________________")
-
-# Exercício 12: Escluir um aluno de um curso
 print("Exercício 12: Excluir um aluno de um curso")
-
 Curso1.rem_aluno_curso(Aluno4)
-
 print("_____________________________________________________________________________________")
