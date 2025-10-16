@@ -66,16 +66,4 @@ Responda (via código) às seguintes questões:
 
 ---
 
-## 🎃 Dica de Ouro
 
-> Aproveite o espírito do Halloween para tornar seu código limpo, modular e assustadoramente organizado! 🕸️
-
----
-
-## 🧠 Objetivo
-
-Praticar conceitos de **herança**, **associação**, **agregação** e **encapsulamento** de forma divertida e desafiadora.
-
----
-
-**Boa sorte, programador(a)! 💀👻**
