@@ -12,7 +12,8 @@
 Observe o diagrama abaixo que apresenta **herança**, **associação do tipo 1** e **associação do tipo n**:
 
 <br/>
-<img width="300" height="250" alt="image" src="[https://github.com/user-attachments/assets/43d97a9e-4ffc-443a-88b3-a74a93c91150](https://svdesdeva.instructure.com/courses/23581/files/1185975/preview)" />
+<img width="342" height="273" alt="image" src="https://github.com/user-attachments/assets/9b5c5fa2-bb99-4aca-b5f5-0ade8bc7c13e" />
+
 
 ---
 
@@ -65,6 +66,7 @@ Responda (via código) às seguintes questões:
 - Métodos: verificar se aluno/turma está no curso, adicionar e remover alunos/turmas
 
 ---
+
 
 
 
