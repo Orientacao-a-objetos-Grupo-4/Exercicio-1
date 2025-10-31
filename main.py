@@ -11,26 +11,8 @@ Turma1 = Turma()
 Turma2 = Turma()
 Turma3 = Turma()
 Turma4 = Turma()
-
-Prof1.set_Professorid(1)
-Prof1.set_nome("João")
-Prof1.set_matriculaProf("12345")
-
-Prof2.set_Professorid(2)
-Prof2.set_nome("Joana")
-Prof2.set_matriculaProf("54321")
-
-Turma1.set_id(101)
-Turma1.set_disciplina("Matemática")
-Turma1.set_professor(Prof1)
-
-Turma2.set_id(102)
-Turma2.set_disciplina("Português")
-Turma2.set_professor(Prof2)
-
-Turma3.set_id(103)
-Turma3.set_disciplina("Inglês")
-Turma3.set_professor(Prof2)
+Curso1 = Curso()
+Curso2 = Curso()
 
 Aluno1 = Aluno()
 Aluno1.set_Alunoid(1)
@@ -56,25 +38,46 @@ Aluno4.set_nome("Márcia")
 Aluno4.set_idade(21)
 Aluno4.set_matriculaAluno("71234")
 
+Prof1.set_Professorid(1)
+Prof1.set_nome("João")
+Prof1.set_matriculaProf("12345")
+
+Prof2.set_Professorid(2)
+Prof2.set_nome("Joana")
+Prof2.set_matriculaProf("54321")
+
+Curso1.set_Cursoid(1)
+Curso1.set_nome("Eng. de Software")
+Curso2.set_Cursoid(2)
+Curso2.set_nome("Arquitetura")
+
+Turma1.set_id(101)
+Turma1.set_disciplina("Matemática")
+Turma1.set_professor(Prof1)
+
+Turma2.set_id(102)
+Turma2.set_disciplina("Português")
+Turma2.set_professor(Prof2)
+
+Turma3.set_id(103)
+Turma3.set_disciplina("Inglês")
+Turma3.set_professor(Prof2)
+
+Curso1.add_turma(Turma1)
+Curso1.add_turma(Turma2)
+Curso1.add_turma(Turma3)
+
+Curso1.add_aluno(Aluno1)
+Curso1.add_aluno(Aluno2)
+Curso1.add_aluno(Aluno3)
+Curso1.add_aluno(Aluno4)
+
 Turma1.add_aluno(Aluno1)
 Turma1.add_aluno(Aluno2)
 Turma2.add_aluno(Aluno1)
 Turma2.add_aluno(Aluno3)
 Turma3.add_aluno(Aluno2)
 Turma3.add_aluno(Aluno4)
-
-Curso1 = Curso()
-Curso2 = Curso()
-
-Curso1.set_Cursoid(1)
-Curso1.set_nome("Eng. de Software")
-
-Curso2.set_Cursoid(2)
-Curso2.set_nome("Arquitetura")
-
-Curso1.add_turma(Turma1)
-Curso1.add_turma(Turma2)
-Curso1.add_turma(Turma3)
 
 print("_____________________________________________________________________________________")
 print("Exercício 1: Imprimir o nome do professor da turma")
@@ -112,6 +115,13 @@ print("_________________________________________________________________________
 print("Exercício 11: Excluir uma turma de um curso")
 Curso1.rem_turma(Turma1)
 print("_____________________________________________________________________________________")
+
+for aluno in Curso1.get_Alunos():
+    print("-", aluno.get_nome())
+
 print("Exercício 12: Excluir um aluno de um curso")
 Curso1.rem_aluno_curso(Aluno4)
 print("_____________________________________________________________________________________")
+
+for aluno in Curso1.get_Alunos():
+    print("-", aluno.get_nome())

@@ -29,14 +29,15 @@ class Turma():
     
     def add_aluno(self, aluno):
         self.__alunos.append(aluno)
-    
+        if self.__curso:
+            if aluno not in self.__curso.get_Alunos():
+                self.__curso.add_aluno(aluno)
+
     def rem_aluno(self, aluno):
         if aluno in self.__alunos:
             self.__alunos.remove(aluno)
-            print(f"Aluno {aluno.get_nome()} removido da turma com sucesso! Da turma {self.get_id()}.")
             return True
         else:
-            print(f"Aluno {aluno.get_nome()} não está nesta turma. {self.get_id()}.")
             return False
 
     def retorno_rem_aluno(self, aluno):

@@ -1,4 +1,5 @@
 from Turma import Turma
+from Aluno import Aluno
 
 
 class Curso():
@@ -25,12 +26,16 @@ class Curso():
 
     def add_aluno(self, aluno):
         self.__alunos.append(aluno)
+        if self not in aluno.get_cursos():
+            aluno.add_curso(self)
 
     def remove_aluno(self, aluno):
         self.__alunos.remove(aluno)
 
     def add_turma(self, turma):
         self.__turmas.append(turma)
+        turma.set_curso(self)
+
     def rem_turma(self, turma):
         if turma in self.__turmas:
             self.__turmas.remove(turma)
@@ -42,8 +47,6 @@ class Curso():
         return self.__turmas
     def set_alunos(self, turmas):
         self.__turmas = turmas
-    
-
     
     def professor_turma(self):
         for turma in self.get_turmas():
@@ -62,6 +65,7 @@ class Curso():
                 if aluno not in aluno_curso:
                     aluno_curso.append(aluno)
         return aluno_curso
+    
     def retorno_listar_alunos(self):
         print("Os alunos registrados no", self.get_nome(), "são:")
         for aluno in self.listar_alunos():
@@ -99,6 +103,8 @@ class Curso():
             if turma.rem_aluno(aluno):
                 aluno_rem_curso = True
         if aluno_rem_curso:
+            if aluno in self.__alunos:
+                self.remove_aluno(aluno)
             print(f"O aluno {aluno.get_nome()} foi excluído com sucesso do curso {self.__nome}!")
         else:
             print(f"O aluno {aluno.get_nome()} não pertence ao curso {self.__nome}.")
