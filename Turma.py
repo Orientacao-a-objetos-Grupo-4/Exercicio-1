@@ -1,10 +1,10 @@
+from Curso import Curso
 class Turma():
     def __init__ (self):
         self.__id = None
         self.__disciplina = None
         self.__alunos = []
         self.__professor = None
-        self.__curso = None
     
     def get_id(self):
         return self.__id
@@ -22,16 +22,12 @@ class Turma():
         return self.__professor
     def set_professor(self, professor):
         self.__professor = professor
-    def get_curso(self):
-        return self.__curso
-    def set_curso(self, curso):
-        self.__curso = curso
     
-    def add_aluno(self, aluno):
+    def add_aluno(self, aluno, curso):
         self.__alunos.append(aluno)
-        if self.__curso:
-            if aluno not in self.__curso.get_Alunos():
-                self.__curso.add_aluno(aluno)
+        if curso in curso.get_turmas():
+            if aluno not in curso.get_Alunos():
+                curso.add_aluno(aluno)
 
     def rem_aluno(self, aluno):
         if aluno in self.__alunos:
@@ -42,7 +38,6 @@ class Turma():
 
     def retorno_rem_aluno(self, aluno):
         if self.rem_aluno(aluno):
-            self.__alunos.remove(aluno)
             print(f"O aluno {aluno.get_nome()} foi excluído com sucesso da turma {self.__id}.")
         else:
             print(f"O aluno {aluno.get_nome()} não pertence à turma {self.__id}.")
@@ -55,12 +50,8 @@ class Turma():
         for aluno in self.get_alunos():
             print("-", aluno.get_nome())
 
-    def pesquisa_aluno(self, aluno_turma):
-        lista_aluno_turma = []
-
-        for aluno in self.get_alunos():
-            lista_aluno_turma.append(aluno)
-        if aluno_turma in lista_aluno_turma:
-            print(f"O(a) aluno {aluno_turma.get_nome()} está matriculado(a) na turma {self.get_id()}.")
+    def pesquisa_aluno(self, aluno):
+        if aluno in self.get_alunos():
+            print(f"O(a) aluno {aluno.get_nome()} está matriculado(a) na turma {self.get_id()}.")
         else:
-            print(f"O(a) aluno {aluno_turma.get_nome()} não está matriculado(a) na turma {self.get_id()}.")
+            print(f"O(a) aluno {aluno.get_nome()} não está matriculado(a) na turma {self.get_id()}.")
